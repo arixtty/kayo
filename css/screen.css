@@ -8605,3 +8605,36 @@ word-wrap: break-word;
 .slider-block > .container {
 	padding:0;
 }
+
+/* КАРТОЧКИ ТОВАРОВ */
+
+.item-page__card {
+    display: flex;
+    padding: 7px 0;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.item-page__card-description {
+
+}
+
+.item-page__card-image {
+    flex: 0 0 200px;
+}
+
+.item-page .item-page__content .item-page__description .item-page__card-image img {
+    margin: 0;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.item-page .item-page__content .item-page__description .item-page__card-image.item-page__card-image--padded img {
+    margin: 10px;
+}
+
+@media only screen and (max-width: 430px) {
+    .item-page__card {
+        flex-wrap: wrap;
+    }
+}
