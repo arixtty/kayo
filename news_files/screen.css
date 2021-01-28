@@ -6396,7 +6396,6 @@ body.main-page{
     margin:37px 0 0 0 
 }
 .footer .footer__contacts{
-    float:right;
     margin-top:17px 
 }
 .footer .footer__contacts .footer__phone{
@@ -8381,8 +8380,9 @@ object-fit:cover;
         display: block;
     }
 	.m-top-part .top-part__right-part {
-		align-items: end;
-		justify-content: end;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-bottom: 35px;
 	}
 	.top-part__right-part {
 		width:50%;
@@ -8402,10 +8402,18 @@ object-fit:cover;
 		margin-bottom:-20px;
 	}
 }
+
 @media (max-width: 767px) {
 	.m-top-part .top-part__right-part .contacts {
 		padding-right:0;
 	}
+    
+    .m-top-part .top-part__right-part {
+        flex-direction: column;
+        align-items: flex-end;
+        padding-bottom: 0;
+    }
+
 	.header .header__contacts {
 		text-align:right;
     }
@@ -8415,6 +8423,7 @@ object-fit:cover;
         -ms-flex-pack: center;
         justify-content: center;
     }
+    
 }
 @media (max-width: 600px) {
     .slider-block .for .text {
@@ -8614,5 +8623,51 @@ word-wrap: break-word;
 }
 
 
-/* Новости */
+/*social media */
 
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    min-width: 250px;
+    padding: 1px 10px;
+}
+
+.social-media__icon {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    transition: all 0.2s ease;
+}
+
+.social-media__icon:hover {
+    fill: #F9B934;
+}
+
+@media only screen and (max-width: 992px) {
+    .social-media {
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .social-media {
+         min-width: 150px;
+    }
+
+    .b24-web-form-popup-btn-42 {
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .b24-web-form-popup-btn-42 {
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .social-media {
+        width: 100%;
+        padding: 0 30px;
+    }
+}
